@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 设置背景颜色 */
+    background: #0a2a43;
+    min-height: 1500px;
+}
+section{
+    /* 相对定位 */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* 隐藏溢出 */
+    overflow: hidden;
+    /* flex布局居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:before{
+    content: '';
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    /* 颜色渐变 */
+    background: linear-gradient(to top,#0a2a43,transparent);
+    z-index: 10000;
+}
+section:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a2a43;
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 指定可替换元素(如<img>)的内容适应到其使用高度和宽度 */
+    object-fit: cover;
+    pointer-events: none;
+}
+.text{
+    position: relative;
+    color: #fff;
+    font-size: 10em;
+    z-index: 1;
+}
+/* 令road优先级比text高 */
+.road{
+    z-index: 2;
+}
+.lorem{
+    margin: auto;
+    width: 1200px;
+    color: #fff;
+    /* 首行空格 */
+    /* text-indent: 2em; */
+}

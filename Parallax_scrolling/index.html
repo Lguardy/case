@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <section>
+        <img src="./img/bg.jpg" class="bg">
+        <img src="./img/moon.png" class="moon">
+        <img src="./img/mountain.png" class="mountain">
+        <img src="./img/road.png" class="road">
+        <h2 class="text">Moon Light</h2>
+    </section>
+    <div class="lorem">
+        <h1>Parallax Background Scrolling</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis dolor, exercitationem rerum eligendi animi reiciendis molestiae cum. Velit molestias nam explicabo at, error repellendus ducimus fugiat fuga iusto adipisci repudiandae perferendis dolores aspernatur consequatur quia? Eum voluptatem quos qui, maiores sunt placeat in dolores vitae fuga et blanditiis? Libero sapiente nostrum maiores repudiandae, ea quasi error quos, a cum mollitia soluta vitae voluptas dicta similique dolore voluptatibus tempore obcaecati repellendus. Reiciendis enim, velit id est autem eum quisquam temporibus sint ducimus debitis corrupti quae! Unde, impedit dicta. Animi debitis deserunt, temporibus maxime tenetur adipisci iusto expedita amet ducimus commodi consequatur nobis quam unde facere numquam praesentium, reprehenderit aliquam doloremque sunt! Iure dolorem ab, eum soluta tenetur vitae doloribus laboriosam voluptatibus, illum sed, ea totam ex. Eos ea eaque omnis magni, earum reprehenderit quasi est distinctio, laudantium sed autem molestiae sapiente at natus quod perspiciatis repudiandae perferendis voluptate voluptatibus fugit corporis architecto soluta! Ratione architecto et, laudantium quisquam neque maiores itaque non voluptate vel aliquam, ipsum sapiente, sit odit quia rem facilis. <br>Optio minus iste cupiditate molestiae veritatis dolorum repellat, quod autem perferendis eos recusandae ratione voluptate minima unde harum tenetur libero numquam dolor aliquid velit aut, deleniti suscipit perspiciatis? Perspiciatis libero illum deleniti incidunt quasi ex optio temporibus quam odio ipsam saepe accusamus itaque sequi, debitis quas dignissimos? Architecto recusandae fugit aspernatur facere error possimus eius nisi ratione totam officiis cumque blanditiis cum dolor dignissimos quibusdam, ipsa fuga natus numquam tempora aut, a odio! Voluptatibus, velit amet. Pariatur architecto ipsam, cumque ullam magnam eum ducimus officia neque odit, delectus non obcaecati dolores ut voluptatum dolore optio incidunt assumenda corrupti sed corporis recusandae consectetur mollitia. Necessitatibus vitae nesciunt nihil, impedit, ratione amet perferendis ut incidunt sed earum magni veritatis doloremque eius quos ad officiis optio nam enim labore quod minus! Nihil aliquam corrupti quaerat odio aspernatur, ex maxime. Vel dignissimos nesciunt necessitatibus, iste nobis ut sint voluptate fugiat modi eos velit similique neque? Rem assumenda officia illum animi cumque quas nisi iste iusto nulla eius quisquam maiores nemo rerum facere quos asperiores pariatur quibusdam minus, excepturi at! Harum officia est temporibus incidunt a saepe voluptatibus assumenda ipsa consequuntur porro similique id voluptates sint, aliquam non quam. <br> officiis, maiores corrupti nemo et tenetur accusamus mollitia dolores omnis ullam facere quibusdam esse, est minus tempora praesentium sequi, dicta saepe molestiae eveniet nihil odio at iste aspernatur. Incidunt voluptate animi cupiditate iure dolore, optio corrupti impedit mollitia alias atque aliquid facilis iusto voluptatum, modi in provident doloribus. Laboriosam optio eos non quis porro perspiciatis et repudiandae, quos ducimus rem itaque esse iure culpa ex delectus reprehenderit modi sapiente maiores mollitia earum autem cum labore tenetur! Porro amet soluta nulla culpa, qui tempora quisquam. Ad magnam corporis error esse fugit earum dolor, molestias culpa excepturi ab facere modi sint expedita sunt. Placeat ut repellendus nesciunt, sequi laboriosam vitae fugiat distinctio? Corporis optio nam voluptas molestias facilis quos commodi animi? Facilis quaerat incidunt placeat suscipit non et qui? Facilis dolor omnis velit saepe consequatur.</div>
+
+    <script>
+        const bg = document.querySelector('.bg');
+        const moon = document.querySelector('.moon');
+        const mountain = document.querySelector('.mountain');
+        const road = document.querySelector('.road');
+        const text = document.querySelector('.text');
+        window.addEventListener('scroll',  () => {
+            // 页面被卷上去的长度
+            let y = window.scrollY;
+            bg.style.top = y * 0.5 + 'px';
+            moon.style.left = - y * 0.5 + 'px';
+            mountain.style.top = -y * 0.15 + 'px';
+            road.style.top = y * 0.15 + 'px';
+            text.style.top = y * 0.5 + 'px';
+        })
+    </script>
+</body>
+
+</html>
